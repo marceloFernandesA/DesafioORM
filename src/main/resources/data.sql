@@ -1,18 +1,13 @@
-
 INSERT INTO tb_participante (nome, email) values ('José Silva','jose@gmail.com');
 INSERT INTO tb_participante (nome, email) values ('Tiago Faria','tiago@gmail.com');
 INSERT INTO tb_participante (nome, email) values ('Maria do Rosário','maria@gmail.com');
 INSERT INTO tb_participante (nome, email) values ('Teresa Silva','teresa@gmail.com');
 
-
-
 INSERT INTO tb_categoria(descricao) VALUES ('Curso');
 INSERT INTO tb_categoria(descricao) VALUES ('Oficina');
 
-tb_atividade
 INSERT INTO tb_atividade (nome, descricao,preco,categoria_id) values ('Curso de HTML','Aprenda HTML de forma prática',80.00,1);
 INSERT INTO tb_atividade (nome, descricao,preco,categoria_id) values ('Oficina de GitHub','Controle versões do seu projeto',50.00,2);
-
 
 INSERT INTO tb_participante_atividade (participante_id, atividades_id) values (1,1);
 INSERT INTO tb_participante_atividade (participante_id, atividades_id) values (1,2);
@@ -20,6 +15,12 @@ INSERT INTO tb_participante_atividade (participante_id, atividades_id) values (2
 INSERT INTO tb_participante_atividade (participante_id, atividades_id) values (3,1);
 INSERT INTO tb_participante_atividade (participante_id, atividades_id) values (3,2);
 INSERT INTO tb_participante_atividade (participante_id, atividades_id) values (4,2);
+
+INSERT INTO tb_bloco (inicio,fim,atividades_id) VALUES (
+TO_TIMESTAMP('2017-09-25 08:00:00', 'YYYY-MM-DD HH24:MI:SS'),
+TO_TIMESTAMP('2017-09-25 11:00:00', 'YYYY-MM-DD HH24:MI:SS'),
+1
+);
 
 INSERT INTO tb_bloco (inicio, fim, atividades_id)
 VALUES (
@@ -32,5 +33,5 @@ INSERT INTO tb_bloco (inicio, fim, atividades_id)
 VALUES (
     TO_TIMESTAMP('2017-09-26 08:00:00', 'YYYY-MM-DD HH24:MI:SS'),
     TO_TIMESTAMP('2017-09-26 11:00:00', 'YYYY-MM-DD HH24:MI:SS'),
-    1
+    2
 );
